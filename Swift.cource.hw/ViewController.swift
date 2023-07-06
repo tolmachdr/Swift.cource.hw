@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var characters: [Character] = Character.Source.makeCharacter()
 
@@ -37,9 +37,24 @@ override func viewDidLoad() {
             
                     ])
     }
-}
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//          tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "detail", sender: self)
+//               let detailViewController = CharacterViewController(character: characters[indexPath.row])
+//           navigationController?.pushViewController(detailViewController, animated: true)
+           }
 
-extension ViewController: UITableViewDataSource {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CharacterViewController {
+            if let indexPath = table.indexPathForSelectedRow {
+                destination.character = characters[indexPath.row]
+            }
+        }
+    }
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return characters.count
     }
@@ -53,5 +68,6 @@ extension ViewController: UITableViewDataSource {
         
         return cell
     }
+   
 }
 
