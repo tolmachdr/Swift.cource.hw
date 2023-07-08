@@ -1,9 +1,11 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let rmClient = RMClient()
 
-    var characters: [Character] = Character.Source.makeCharacter()
-
+    var characters: [RMCharacterModel] = []
+    
     private var table: UITableView = {
         
         let table = UITableView()
@@ -13,16 +15,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return table
     }()
     
+    let scroll = UIScrollView()
     
     
 override func viewDidLoad() {
     super.viewDidLoad()
    
+    view.addSubview(scroll)
     self.setupUI()
+    
+    
+    scroll.translatesAutoresizingMaskIntoConstraints = false
+    scroll.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+    scroll.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+    scroll.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+    scroll.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     
     self.table.delegate = self
     self.table.dataSource = self
-    
+    fetchCharacters()
     }
     
     private func setupUI() {
@@ -38,6 +49,19 @@ override func viewDidLoad() {
                     ])
     }
     
+    private func fetchCharacters() {
+            async {
+                do {
+                    self.characters = try await rmClient.character().getAllCharacters()
+                    DispatchQueue.main.async {
+                        self.table.reloadData()
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+        }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //          tableView.deselectRow(at: indexPath, animated: true)
         
@@ -50,10 +74,10 @@ override func viewDidLoad() {
         if let destination = segue.destination as? CharacterViewController {
             if let indexPath = table.indexPathForSelectedRow {
                 destination.character = characters[indexPath.row]
+//                print(characters[indexPath.row].image)
             }
         }
     }
-
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return characters.count

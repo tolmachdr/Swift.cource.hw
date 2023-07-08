@@ -19,7 +19,7 @@ class CharacterCell: UITableViewCell {
         label.layer.masksToBounds = true
         label.textAlignment = .center
         label.backgroundColor = UIColor.black
-        label.font = UIFont.systemFont(ofSize: 24)
+        label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
 
@@ -27,7 +27,8 @@ class CharacterCell: UITableViewCell {
         var label = UILabel()
         label.textColor = .black
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 24)
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.numberOfLines = 2
         return label
     }()
     
@@ -59,12 +60,16 @@ class CharacterCell: UITableViewCell {
             name.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             name.leadingAnchor.constraint(equalTo: characterLabel.leadingAnchor, constant: 16),
             name.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
-            name.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            name.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            name.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant: 20),
+            name.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            name.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 40)
         ])
     }
     
-    func configure(character: Character) {
-        characterLabel.text = character.image
+    func configure(character: RMCharacterModel) {
+        
+        characterLabel.text = "Image"
         name.text = character.name
     }
 }

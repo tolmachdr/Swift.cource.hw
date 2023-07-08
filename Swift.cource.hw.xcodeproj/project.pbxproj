@@ -16,6 +16,9 @@
 		273AFC7B2A51CA1F005B764B /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFC7A2A51CA1F005B764B /* Source.swift */; };
 		273AFC7F2A533131005B764B /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFC7E2A533131005B764B /* CharacterCell.swift */; };
 		948877262A57204B002882C9 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948877252A57204B002882C9 /* CharacterViewController.swift */; };
+		948877282A58A418002882C9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948877272A58A418002882C9 /* NetworkManager.swift */; };
+		9488772A2A58A45B002882C9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948877292A58A45B002882C9 /* Character.swift */; };
+		9488772C2A58A560002882C9 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488772B2A58A560002882C9 /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		273AFC7A2A51CA1F005B764B /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = SOURCE_ROOT; };
 		273AFC7E2A533131005B764B /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = SOURCE_ROOT; };
 		948877252A57204B002882C9 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = SOURCE_ROOT; };
+		948877272A58A418002882C9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = SOURCE_ROOT; };
+		948877292A58A45B002882C9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = SOURCE_ROOT; };
+		9488772B2A58A560002882C9 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,9 @@
 		273AFC652A51C9A3005B764B /* Swift.cource.hw */ = {
 			isa = PBXGroup;
 			children = (
+				9488772B2A58A560002882C9 /* Client.swift */,
+				948877292A58A45B002882C9 /* Character.swift */,
+				948877272A58A418002882C9 /* NetworkManager.swift */,
 				948877252A57204B002882C9 /* CharacterViewController.swift */,
 				273AFC7E2A533131005B764B /* CharacterCell.swift */,
 				273AFC7A2A51CA1F005B764B /* Source.swift */,
@@ -150,9 +159,12 @@
 				948877262A57204B002882C9 /* CharacterViewController.swift in Sources */,
 				273AFC7F2A533131005B764B /* CharacterCell.swift in Sources */,
 				273AFC7B2A51CA1F005B764B /* Source.swift in Sources */,
+				948877282A58A418002882C9 /* NetworkManager.swift in Sources */,
 				273AFC6B2A51C9A3005B764B /* ViewController.swift in Sources */,
 				273AFC672A51C9A3005B764B /* AppDelegate.swift in Sources */,
 				273AFC692A51C9A3005B764B /* SceneDelegate.swift in Sources */,
+				9488772A2A58A45B002882C9 /* Character.swift in Sources */,
+				9488772C2A58A560002882C9 /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
