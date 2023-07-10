@@ -17,8 +17,12 @@
 		273AFC7F2A533131005B764B /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273AFC7E2A533131005B764B /* CharacterCell.swift */; };
 		948877262A57204B002882C9 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948877252A57204B002882C9 /* CharacterViewController.swift */; };
 		948877282A58A418002882C9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948877272A58A418002882C9 /* NetworkManager.swift */; };
-		9488772A2A58A45B002882C9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948877292A58A45B002882C9 /* Character.swift */; };
+		9488772A2A58A45B002882C9 /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948877292A58A45B002882C9 /* RMCharacter.swift */; };
 		9488772C2A58A560002882C9 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488772B2A58A560002882C9 /* Client.swift */; };
+		94C15CDD2A5C84CC005B8C0E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CDB2A5C84CB005B8C0E /* Model.xcdatamodeld */; };
+		94C15CDF2A5C875B005B8C0E /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CDE2A5C875B005B8C0E /* PersistentContainer.swift */; };
+		94C15CEA2A5CA120005B8C0E /* CharacterMod+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CE82A5CA120005B8C0E /* CharacterMod+CoreDataClass.swift */; };
+		94C15CEB2A5CA120005B8C0E /* CharacterMod+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CE92A5CA120005B8C0E /* CharacterMod+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +38,12 @@
 		273AFC7E2A533131005B764B /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = SOURCE_ROOT; };
 		948877252A57204B002882C9 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = SOURCE_ROOT; };
 		948877272A58A418002882C9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = SOURCE_ROOT; };
-		948877292A58A45B002882C9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = SOURCE_ROOT; };
+		948877292A58A45B002882C9 /* RMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = SOURCE_ROOT; };
 		9488772B2A58A560002882C9 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = SOURCE_ROOT; };
+		94C15CDC2A5C84CC005B8C0E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		94C15CDE2A5C875B005B8C0E /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = SOURCE_ROOT; };
+		94C15CE82A5CA120005B8C0E /* CharacterMod+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterMod+CoreDataClass.swift"; sourceTree = "<group>"; };
+		94C15CE92A5CA120005B8C0E /* CharacterMod+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterMod+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,8 @@
 		273AFC5A2A51C9A3005B764B = {
 			isa = PBXGroup;
 			children = (
+				94C15CE82A5CA120005B8C0E /* CharacterMod+CoreDataClass.swift */,
+				94C15CE92A5CA120005B8C0E /* CharacterMod+CoreDataProperties.swift */,
 				273AFC652A51C9A3005B764B /* Swift.cource.hw */,
 				273AFC642A51C9A3005B764B /* Products */,
 			);
@@ -68,8 +78,10 @@
 		273AFC652A51C9A3005B764B /* Swift.cource.hw */ = {
 			isa = PBXGroup;
 			children = (
+				94C15CDE2A5C875B005B8C0E /* PersistentContainer.swift */,
+				94C15CDB2A5C84CB005B8C0E /* Model.xcdatamodeld */,
 				9488772B2A58A560002882C9 /* Client.swift */,
-				948877292A58A45B002882C9 /* Character.swift */,
+				948877292A58A45B002882C9 /* RMCharacter.swift */,
 				948877272A58A418002882C9 /* NetworkManager.swift */,
 				948877252A57204B002882C9 /* CharacterViewController.swift */,
 				273AFC7E2A533131005B764B /* CharacterCell.swift */,
@@ -159,11 +171,15 @@
 				948877262A57204B002882C9 /* CharacterViewController.swift in Sources */,
 				273AFC7F2A533131005B764B /* CharacterCell.swift in Sources */,
 				273AFC7B2A51CA1F005B764B /* Source.swift in Sources */,
+				94C15CDF2A5C875B005B8C0E /* PersistentContainer.swift in Sources */,
+				94C15CEB2A5CA120005B8C0E /* CharacterMod+CoreDataProperties.swift in Sources */,
 				948877282A58A418002882C9 /* NetworkManager.swift in Sources */,
 				273AFC6B2A51C9A3005B764B /* ViewController.swift in Sources */,
 				273AFC672A51C9A3005B764B /* AppDelegate.swift in Sources */,
 				273AFC692A51C9A3005B764B /* SceneDelegate.swift in Sources */,
-				9488772A2A58A45B002882C9 /* Character.swift in Sources */,
+				94C15CEA2A5CA120005B8C0E /* CharacterMod+CoreDataClass.swift in Sources */,
+				94C15CDD2A5C84CC005B8C0E /* Model.xcdatamodeld in Sources */,
+				9488772A2A58A45B002882C9 /* RMCharacter.swift in Sources */,
 				9488772C2A58A560002882C9 /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +403,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		94C15CDB2A5C84CB005B8C0E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				94C15CDC2A5C84CC005B8C0E /* Model.xcdatamodel */,
+			);
+			currentVersion = 94C15CDC2A5C84CC005B8C0E /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 273AFC5B2A51C9A3005B764B /* Project object */;
 }
