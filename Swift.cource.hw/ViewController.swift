@@ -3,7 +3,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let characterController = CharacterController()
+    private let characterController = CharacterController()
     
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -26,11 +26,20 @@ class ViewController: UIViewController {
         ])
         
         characterController.tableView = tableView
+        characterController.viewController = self
         tableView.delegate = characterController
         tableView.dataSource = characterController
         
         async {
             await characterController.fetchData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail", let character = sender as? RMCharacterModel {
+            if let destination = segue.destination as? CharacterViewController {
+                destination.character = character
+            }
         }
     }
 }

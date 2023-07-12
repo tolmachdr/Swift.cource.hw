@@ -7,9 +7,7 @@ class CharacterController: NSObject, UITableViewDelegate, UITableViewDataSource 
     private var characters: [RMCharacterModel] = []
     
     weak var tableView: UITableView?
-    weak var navigationController: UINavigationController?
-    
-    
+    weak var viewController: UIViewController?
     
     func fetchData() async {
         do {
@@ -38,20 +36,7 @@ class CharacterController: NSObject, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = ViewController()
-        viewController.performSegue(withIdentifier: "detail", sender: viewController.self)
-//        let detailViewController = CharacterViewController()
-//        navigationController?.pushViewController(detailViewController, animated: true)
+        let character = characters[indexPath.row]
+        viewController?.performSegue(withIdentifier: "detail", sender: character)
     }
-    
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if let destination = segue.destination as? CharacterViewController {
-                if let indexPath = tableView?.indexPathForSelectedRow {
-                    destination.character = characters[indexPath.row]
-    //                print(characters[indexPath.row].image)
-                }
-            }
-        }
-    
-    
 }
