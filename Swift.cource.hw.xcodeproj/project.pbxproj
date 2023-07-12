@@ -19,6 +19,7 @@
 		948877282A58A418002882C9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948877272A58A418002882C9 /* NetworkManager.swift */; };
 		9488772A2A58A45B002882C9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948877292A58A45B002882C9 /* Character.swift */; };
 		9488772C2A58A560002882C9 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9488772B2A58A560002882C9 /* Client.swift */; };
+		94C15CF62A5F2FFB005B8C0E /* CharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CF52A5F2FFB005B8C0E /* CharacterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		948877272A58A418002882C9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = SOURCE_ROOT; };
 		948877292A58A45B002882C9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = SOURCE_ROOT; };
 		9488772B2A58A560002882C9 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = SOURCE_ROOT; };
+		94C15CF52A5F2FFB005B8C0E /* CharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		273AFC652A51C9A3005B764B /* Swift.cource.hw */ = {
 			isa = PBXGroup;
 			children = (
+				94C15CF52A5F2FFB005B8C0E /* CharacterController.swift */,
 				9488772B2A58A560002882C9 /* Client.swift */,
 				948877292A58A45B002882C9 /* Character.swift */,
 				948877272A58A418002882C9 /* NetworkManager.swift */,
@@ -159,6 +162,7 @@
 				948877262A57204B002882C9 /* CharacterViewController.swift in Sources */,
 				273AFC7F2A533131005B764B /* CharacterCell.swift in Sources */,
 				273AFC7B2A51CA1F005B764B /* Source.swift in Sources */,
+				94C15CF62A5F2FFB005B8C0E /* CharacterController.swift in Sources */,
 				948877282A58A418002882C9 /* NetworkManager.swift in Sources */,
 				273AFC6B2A51C9A3005B764B /* ViewController.swift in Sources */,
 				273AFC672A51C9A3005B764B /* AppDelegate.swift in Sources */,
