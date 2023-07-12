@@ -22,6 +22,7 @@
 		94C15CEE2A5CA4BE005B8C0E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CEC2A5CA4BE005B8C0E /* Model.xcdatamodeld */; };
 		94C15CF12A5CA52A005B8C0E /* CharacterModule+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CEF2A5CA52A005B8C0E /* CharacterModule+CoreDataClass.swift */; };
 		94C15CF22A5CA52A005B8C0E /* CharacterModule+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CF02A5CA52A005B8C0E /* CharacterModule+CoreDataProperties.swift */; };
+		94C15CF42A5CA674005B8C0E /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C15CF32A5CA674005B8C0E /* PersistentContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		94C15CED2A5CA4BE005B8C0E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		94C15CEF2A5CA52A005B8C0E /* CharacterModule+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterModule+CoreDataClass.swift"; sourceTree = "<group>"; };
 		94C15CF02A5CA52A005B8C0E /* CharacterModule+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterModule+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		94C15CF32A5CA674005B8C0E /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		273AFC652A51C9A3005B764B /* Swift.cource.hw */ = {
 			isa = PBXGroup;
 			children = (
+				94C15CF32A5CA674005B8C0E /* PersistentContainer.swift */,
 				9488772B2A58A560002882C9 /* Client.swift */,
 				948877292A58A45B002882C9 /* Character.swift */,
 				948877272A58A418002882C9 /* NetworkManager.swift */,
@@ -171,6 +174,7 @@
 				948877282A58A418002882C9 /* NetworkManager.swift in Sources */,
 				273AFC6B2A51C9A3005B764B /* ViewController.swift in Sources */,
 				273AFC672A51C9A3005B764B /* AppDelegate.swift in Sources */,
+				94C15CF42A5CA674005B8C0E /* PersistentContainer.swift in Sources */,
 				273AFC692A51C9A3005B764B /* SceneDelegate.swift in Sources */,
 				94C15CEE2A5CA4BE005B8C0E /* Model.xcdatamodeld in Sources */,
 				94C15CF12A5CA52A005B8C0E /* CharacterModule+CoreDataClass.swift in Sources */,

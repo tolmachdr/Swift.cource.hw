@@ -89,13 +89,50 @@ public struct NetworkHandler {
         - data: HTTP data response.
      - Returns: Model struct of associated variable type.
      */
-    func decodeJSONData<T: Codable>(data: Data) throws -> T {
-        let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode(T.self, from: data)
-            return decodedData
-        } catch {
-            throw NetworkHandlerError.JSONDecodingError
+    func performAPIRequestAndParseResponse(method: String) async throws -> CharacterMod {
+            // Perform the API request to get the response data
+            let responseData = try await performAPIRequestByMethod(method: method)
+            
+            // Parse the API response data
+            let decoder = JSONDecoder()
+            do {
+                let parsedData = try decoder.decode(RMCharacterModel.self, from: responseData)
+                
+                guard let appDelegate = await UIApplication.shared.delegate as? AppDelegate else {
+                    fatalError("AppDelegate not found")
+                }
+                // Access the relevant data from the parsed response (e.g., parsedData.name, parsedData.status, etc.)
+                let name = parsedData.name
+                let status = parsedData.status
+                let species = parsedData.species
+                let type = parsedData.type
+                let gender = parsedData.gender
+                let location = parsedData.location
+                
+                // Create a new instance of your Core Data entity and set its attributes
+                let managedObjectContext = await appDelegate.managedObjectContext // Replace appDelegate with the actual reference to your app delegate
+                let entity = CharacterMod(context: managedObjectContext)
+                entity.name = name
+                entity.status = status
+                entity.species = species
+                entity.type = type
+                entity.gender = gender
+                entity.location = location.name
+                
+                // Save the context to persist the changes to disk
+                do {
+                    try managedObjectContext.save()
+                    print("Data saved successfully")
+                } catch {
+                    print("Error saving context: \(error)")
+                }
+                
+                // Return the created entity or any other result you need
+                return entity
+            } catch {
+                print("Error parsing API response: \(error)")
+                throw error
+            }
         }
-    }
+        
 }
